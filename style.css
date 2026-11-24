@@ -1,7 +1,8 @@
 :root {
   --ice: #eef5f8;
   --deep: #0f2a3a;
-  --sea: #1f5a74;
+  --sea: #2f6f8a;
+  --frost: #7fb3c8;
   --tusk: #f6efe2;
   --accent: #e0894a;
   --text: #1b2a33;
@@ -43,7 +44,7 @@ header.site .brand {
   font-size: 1.1rem;
 }
 
-header.site .brand svg { width: 36px; height: 36px; }
+header.site .brand img { width: 36px; height: 36px; border-radius: 9px; display: block; }
 
 header.site nav a {
   margin-left: 18px;
@@ -64,10 +65,12 @@ main {
   padding: 64px 0 48px;
 }
 
-.hero svg.mascot {
+.hero img.mascot {
   width: 160px;
   height: 160px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+  border-radius: 36px;
+  box-shadow: 0 10px 30px rgba(15, 42, 58, 0.25);
 }
 
 .hero h1 {
@@ -98,6 +101,7 @@ main {
   box-shadow: 0 1px 2px rgba(15, 42, 58, 0.06), 0 4px 16px rgba(15, 42, 58, 0.05);
 }
 
+.card { border-top: 4px solid var(--frost); }
 .card h3 { margin: 0 0 6px; color: var(--deep); font-size: 1.05rem; }
 .card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
 
@@ -126,7 +130,7 @@ main {
   border-radius: 999px;
   font-weight: 600;
 }
-.button:hover { background: var(--sea); color: #fff; }
+.button:hover { background: var(--accent); color: #fff; }
 
 footer.site {
   max-width: var(--max);
@@ -154,4 +158,6 @@ footer.site a { color: var(--muted); }
   .button { background: var(--accent); color: #0c1b24; }
   .button:hover { background: #f0a06a; color: #0c1b24; }
   footer.site { border-top-color: rgba(255, 255, 255, 0.1); }
+  .hero img.mascot { box-shadow: 0 0 0 1px rgba(127, 179, 200, 0.35), 0 10px 30px rgba(0, 0, 0, 0.4); }
+  header.site .brand img { box-shadow: 0 0 0 1px rgba(127, 179, 200, 0.35); }
 }
